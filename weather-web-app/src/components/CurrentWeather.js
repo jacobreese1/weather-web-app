@@ -1,3 +1,5 @@
+import styles from "./CurrentWeather.module.scss";
+
 const CurrentWeather = () => {
   return (
     <div>

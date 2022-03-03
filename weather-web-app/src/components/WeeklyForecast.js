@@ -1,3 +1,6 @@
+import styles from "./WeeklyForecast.module.scss";
+
+
 const WeeklyForecast = () => {
     return (
         <div>

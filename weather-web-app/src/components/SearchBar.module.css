@@ -1,12 +1,12 @@
-@import "../design/scss-variables";
+@import "../design/css-variables.css";
 
 .container {
   display: flex;
 }
 
 .searchBar {
-  background-color: $color-gray-light-1;
-  color: $color-primary;
+  background-color: var(--color-gray-light-1);
+  color: var(--color-primary);
   padding: 5px;
   width: 30vw;
   border: none;

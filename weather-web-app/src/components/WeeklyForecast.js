@@ -1,4 +1,4 @@
-import styles from "./_WeeklyForecast.module.scss";
+import styles from "./WeeklyForecast.module.css";
 
 
 const WeeklyForecast = () => {

@@ -1,4 +1,4 @@
-import styles from "./_CurrentWeather.module.scss";
+import styles from "./CurrentWeather.module.css";
 
 const CurrentWeather = () => {
   return (

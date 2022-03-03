@@ -1,4 +1,4 @@
-@import "./design/scss-variables";
+@import "./design/css-variables.css";
 
 body {
   margin: 0;

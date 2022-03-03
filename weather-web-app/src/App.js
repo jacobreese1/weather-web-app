@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import CurrentWeather from "./components/CurrentWeather";
 import SearchBar from "./components/SearchBar";
 import WeeklyForecast from "./components/WeeklyForecast";

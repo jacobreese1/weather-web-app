@@ -3,7 +3,8 @@ import styles from "./SearchBar.module.css";
 const SearchBar = () => {
   return (
     <div className={styles.container}>
-      <p className={styles.searchBar}>Search Bar</p>
+      <input placeholder="Search Zip/City/State" className={styles.searchBar} />
+      <svg xmlns="../images/svg/magnifying-glass.svg" fill="none" className={styles.searchBarSVG}></svg>
     </div>
   );
 };

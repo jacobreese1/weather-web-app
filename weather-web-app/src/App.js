@@ -17,7 +17,8 @@ function App() {
       });
 
       await fetch(
-        `https://api.openweathermap.org/data/2.5/weather/?lat=${latitude}&lon=${longitude}&units=imperial&appid=1e39a7bcb850e84609518a1b0086e36e`
+        `http://api.openweathermap.org/data/2.5/weather/?lat=${latitude}&lon=${longitude}&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d`
+        // `http://api.openweathermap.org/data/2.5/weather?q=Louisville,KY,usA&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d`
       )
         .then((res) => res.json())
         .then((result) => {
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SearchBar input={location} />
+        <SearchBar />
         <CurrentWeather />
         <WeeklyForecast />
       </header>

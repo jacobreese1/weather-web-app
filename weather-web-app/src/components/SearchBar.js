@@ -2,30 +2,28 @@ import styles from "./SearchBar.module.css";
 import { useState, useEffect } from "react";
 
 const SearchBar = () => {
-  const [cityName, setCityName] = useState();
-  const [stateCode, setStateCode] = useState();
-  const [countryCode, setCountryCode] = useState();
-  const [data, setData] = useState([]);
+  // const [cityName, setCityName] = useState();
+  // const [stateCode, setStateCode] = useState();
+  // const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.watchPosition((name) => {
-        setCityName(name);
-        setStateCode(name);
-        setCountryCode(name);
-      });
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     navigator.geolocation.watchPosition((name) => {
+  //       setCityName(name);
+  //       setStateCode(name);
+  //     });
 
-      await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=Louisville,KY,usA&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d`
-        )
-        .then((res) => res.json())
-        .then((result) => {
-          setData(result);
-          console.log(result);
-        });
-    };
-    fetchData();
-  }, [cityName, stateCode, countryCode]);
+  //     await fetch(
+  //       `http://api.openweathermap.org/data/2.5/weather?q=${cityName},${stateCode}&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d`
+  //       )
+  //       .then((res) => res.json())
+  //       .then((result) => {
+  //         setData(result);
+  //         console.log(result);
+  //       });
+  //   };
+  //   fetchData();
+  // }, [cityName, stateCode]);
 
   return (
     <div className={styles.container}>

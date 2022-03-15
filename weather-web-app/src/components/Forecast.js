@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Conditions from "./conditions/Conditions";
 import styles from "./Forecast.module.css";
+import RadioButton from "./elements/RadioButton";
 
 const Forecast = () => {
   //   const [longitude, setLongitude] = useState();
@@ -44,6 +45,7 @@ const Forecast = () => {
     // fetch(
     //     "https://api.openweathermap.org/data/2.5/weather?q=Seattle&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d",
     //   {
+
     e.preventDefault();
 
     fetch(
@@ -63,6 +65,10 @@ const Forecast = () => {
       });
   };
 
+  const radioChangeHandler = (event) => {
+    setUnits(event.target.value);
+  };
+
   return (
     <div className={styles.container}>
       <form onSubmit={getForecast}>
@@ -79,27 +85,53 @@ const Forecast = () => {
           fill="none"
           className={styles.forecastSVG}
         ></svg>
-        <label>
-          <input
+        <div className={styles.forecastRadio}>
+          {/* <input
             type="radio"
             name="units"
             checked={units === "imperial"}
             value="imperial"
+            id="imperial"
             onChange={(e) => setUnits(e.target.value)}
+            className={styles.radioInput}
           />
-          Fahrenheit
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="units"
-            checked={units === "metric"}
+          <label className={styles.radioBtnLabel}>
+            <span htmlFor="imperial" className={styles.radioBtn}></span>
+            Fahrenheit
+          </label> */}
+          {/* <input
+                type="radio"
+                name="units"
+                checked={units === "metric"}
+                value="metric"
+                id="metric"
+                onChange={(e) => setUnits(e.target.value)}
+                className={styles.radioInput}
+              />
+              <label className={styles.radioBtnLabel}>
+                <span htmlFor="metric" class={styles.radioBtn}></span>
+                Celcius
+              </label> */}
+          <RadioButton
+            changed={radioChangeHandler}
+            id="1"
+            // isSelected={units}
+            label="Fahrenheit"
+            value="imperial"
+            name="temp"
+          />
+          <RadioButton
+            changed={radioChangeHandler}
+            id="2"
+            // isSelected={units}
+            label="Celcius"
             value="metric"
-            onChange={(e) => setUnits(e.target.value)}
+            name="temp"
           />
-          Celcius
-        </label>
-        <button type="submit">Get Forecast</button>
+        </div>
+        <button type="submit" className={styles.btn}>
+          Get Forecast
+        </button>
       </form>
       <Conditions responseObj={responseObj} />
     </div>

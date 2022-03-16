@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Conditions from "./conditions/Conditions";
 import styles from "./Forecast.module.css";
 import RadioButton from "./elements/RadioButton";
+import Button from "./elements/Button";
 
 const Forecast = () => {
   //   const [longitude, setLongitude] = useState();
@@ -42,10 +43,6 @@ const Forecast = () => {
   const uriCodedCity = encodeURIComponent(city);
 
   const getForecast = (e) => {
-    // fetch(
-    //     "https://api.openweathermap.org/data/2.5/weather?q=Seattle&units=imperial&limit=1&appid=e0bfa8943fccaf4e391b2daf5d46247d",
-    //   {
-
     e.preventDefault();
 
     fetch(
@@ -86,32 +83,6 @@ const Forecast = () => {
           className={styles.forecastSVG}
         ></svg>
         <div className={styles.forecastRadio}>
-          {/* <input
-            type="radio"
-            name="units"
-            checked={units === "imperial"}
-            value="imperial"
-            id="imperial"
-            onChange={(e) => setUnits(e.target.value)}
-            className={styles.radioInput}
-          />
-          <label className={styles.radioBtnLabel}>
-            <span htmlFor="imperial" className={styles.radioBtn}></span>
-            Fahrenheit
-          </label> */}
-          {/* <input
-                type="radio"
-                name="units"
-                checked={units === "metric"}
-                value="metric"
-                id="metric"
-                onChange={(e) => setUnits(e.target.value)}
-                className={styles.radioInput}
-              />
-              <label className={styles.radioBtnLabel}>
-                <span htmlFor="metric" class={styles.radioBtn}></span>
-                Celcius
-              </label> */}
           <RadioButton
             changed={radioChangeHandler}
             id="1"
@@ -129,9 +100,7 @@ const Forecast = () => {
             name="temp"
           />
         </div>
-        <button type="submit" className={styles.btn}>
-          Get Forecast
-        </button>
+        <Button type="submit" label="Get Forecast" />
       </form>
       <Conditions responseObj={responseObj} />
     </div>

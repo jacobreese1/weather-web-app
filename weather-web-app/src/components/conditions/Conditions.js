@@ -1,6 +1,8 @@
+import styles from "./Conditions.module.css";
+
 const Conditions = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
       {props.responseObj.cod === 200 ? (
         <div>
           <p>

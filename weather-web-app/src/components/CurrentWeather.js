@@ -34,7 +34,7 @@ const CurrentWeather = () => {
   }, [latitude, longitude]);
 
   return (
-    <div>
+    <div className={styles.conditions}>
       <Conditions responseObj={responseObj} />
     </div>
   );

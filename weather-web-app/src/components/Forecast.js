@@ -3,6 +3,7 @@ import Conditions from "./conditions/Conditions";
 import styles from "./Forecast.module.css";
 import RadioButton from "./elements/RadioButton";
 import Button from "./elements/Button";
+import Card from "./elements/Card";
 
 const Forecast = () => {
   const [responseObj, setResponseObj] = useState({});
@@ -71,7 +72,9 @@ const Forecast = () => {
         </div>
         <Button type="submit" label="Get Forecast" />
       </form>
-      <Conditions responseObj={responseObj} />
+      <Card>
+        <Conditions responseObj={responseObj} />
+      </Card>
     </div>
   );
 };

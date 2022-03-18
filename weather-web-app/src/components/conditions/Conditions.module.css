@@ -1,9 +1,13 @@
 @import "../../design/css-variables.css";
 
 .container {
-    display: flex;
-    margin-top: 15px;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 50px; /*remove after creating card*/
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 50px; /*remove after creating card*/
+}
+
+li {
+  list-style: none;
 }

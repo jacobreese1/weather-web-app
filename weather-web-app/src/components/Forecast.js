@@ -1,41 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Conditions from "./conditions/Conditions";
 import styles from "./Forecast.module.css";
 import RadioButton from "./elements/RadioButton";
 import Button from "./elements/Button";
 
 const Forecast = () => {
-  //   const [longitude, setLongitude] = useState();
-  //   const [latitude, setLatitude] = useState();
-  //   const [data, setData] = useState([]);
-
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       navigator.geolocation.getCurrentPosition((position) => {
-  //         setLatitude(position.coords.latitude);
-  //         setLongitude(position.coords.longitude);
-  //       });
-
-  //       await fetch(
-  //         "https://community-open-weather-map.p.rapidapi.com/weather?q=seattle&lat=0&lon=0&callback=test&id=2172797&lang=null&units=imperial&mode=xml",
-  //         {
-  //           method: "GET",
-  //           headers: {
-  //             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-  //             "x-rapidapi-key":
-  //               "2285fd6af2mshbb0083a4e670696p11ba94jsn7e53884c3285",
-  //           },
-  //         }
-  //       )
-  //         .then((response) => {
-  //           console.log(response);
-  //         })
-  //         .catch((err) => {
-  //           console.error(err);
-  //         });
-  //     };
-  //     fetchData();
-  //   }, [latitude, longitude]);
   const [responseObj, setResponseObj] = useState({});
   const [city, setCity] = useState("");
   const [units, setUnits] = useState("imperial");

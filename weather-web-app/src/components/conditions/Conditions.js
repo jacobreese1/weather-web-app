@@ -3,8 +3,6 @@ import styles from "./Conditions.module.css";
 const Conditions = (props) => {
   const currentTime = new Date().toLocaleTimeString();
 
-  // const sunsetTime = new Date(props.responseObj.sys.sunset).toLocaleTimeString();
-
   return (
     <div className={styles.container}>
       {props.responseObj.cod === 200 ? (
@@ -24,8 +22,6 @@ const Conditions = (props) => {
               Current conditions: {props.responseObj.weather[0].description}
             </li>
             <li>{Math.round(props.responseObj.wind.speed)}mph</li>
-            <li>Sunrise</li>
-            <li>Sunset</li>
             <li>
               Humidity: {Math.round(props.responseObj.main.humidity)}&#37;
             </li>
@@ -35,6 +31,8 @@ const Conditions = (props) => {
     </div>
   );
 };
+
+//Sample json returned data
 
 // test({
 //   coord: { lon: -0.1257, lat: 51.5085 },

@@ -19,9 +19,9 @@
   --color-white: #ffffff;
 
   --u-margin-sm: 2px;
-  --u-margin-md: 4px;
-  --u-margin-lg: 8px;
-  --u-margin-hg: 10px;
+  --u-margin-md: 5px;
+  --u-margin-lg: 10px;
+  --u-margin-hg: 25px;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);

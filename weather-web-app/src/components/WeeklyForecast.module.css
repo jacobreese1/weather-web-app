@@ -1,0 +1,8 @@
+@import "../design/css-variables.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 460px;
+}

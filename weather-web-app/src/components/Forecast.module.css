@@ -2,11 +2,11 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 5px;
-  margin-top: 5vh;
+  margin-top: 25px;
   z-index: 1;
-  flex-direction: column;
 }
 
 .forecast {
@@ -35,9 +35,11 @@
 .forecastSVG {
   height: 15px;
   width: 15px;
-  padding: 5px;
+  padding: 12px;
   position: absolute;
   margin-right: 5px;
+  margin-left: -28px;
+  margin-top: 2px;
   background-color: var(--color-gray-dark-1);
   mask-image: url(../images/SVG/magnifying-glass.svg);
   mask-size: cover;
@@ -54,4 +56,13 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
+}
+
+.forecastSearch {
+  margin-top: 26px;
+  width: 322px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: 485px;
+  position: absolute;
 }

@@ -37,44 +37,48 @@ const Forecast = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={getForecast}>
-        <input
-          type="text"
-          placeholder="Enter City"
-          maxLength="50"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          className={styles.forecast}
-        />
-        <svg
-          xmlns="../images/svg/magnifying-glass.svg"
-          fill="none"
-          className={styles.forecastSVG}
-        ></svg>
-        <div className={styles.forecastRadio}>
-          <RadioButton
-            changed={radioChangeHandler}
-            id="1"
-            // isSelected={units}
-            label="Fahrenheit"
-            value="imperial"
-            name="temp"
+    <div>
+      <div className={styles.container}>
+        <form onSubmit={getForecast}>
+          <input
+            type="text"
+            placeholder="Enter City"
+            maxLength="50"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            className={styles.forecast}
           />
-          <RadioButton
-            changed={radioChangeHandler}
-            id="2"
-            // isSelected={units}
-            label="Celcius"
-            value="metric"
-            name="temp"
-          />
-        </div>
-        <Button type="submit" label="Get Forecast" />
-      </form>
-      <Card>
-        <Conditions responseObj={responseObj} />
-      </Card>
+          <svg
+            xmlns="../images/svg/magnifying-glass.svg"
+            fill="none"
+            className={styles.forecastSVG}
+          ></svg>
+          <div className={styles.forecastRadio}>
+            <RadioButton
+              changed={radioChangeHandler}
+              id="1"
+              // isSelected={units}
+              label="Fahrenheit"
+              value="imperial"
+              name="temp"
+            />
+            <RadioButton
+              changed={radioChangeHandler}
+              id="2"
+              // isSelected={units}
+              label="Celcius"
+              value="metric"
+              name="temp"
+            />
+          </div>
+          <Button type="submit" label="Get Forecast" />
+        </form>
+      </div>
+      <div className={styles.forecastSearch}>
+        <Card>
+          <Conditions responseObj={responseObj} />
+        </Card>
+      </div>
     </div>
   );
 };

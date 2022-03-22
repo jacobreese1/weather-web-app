@@ -1,0 +1,14 @@
+@import "../../design/css-variables.css";
+
+.container {
+  display: grid inherit;
+  margin-top: 15px;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
